@@ -2,7 +2,7 @@
 str1:    .string "Hello World"
 str2:    .string "length of last word is "
 str3:    .string "I  am   a student   "
-a:       .string "a"
+a:       .string " avc "
 space:   .string " "
 
 
@@ -10,7 +10,6 @@ space:   .string " "
 # s1 = str1 address
 # s2 = space
 # s3 = length
-# t1 = str1[i]
 
 main:
         #function:lengthOfLastWord(char * s)
