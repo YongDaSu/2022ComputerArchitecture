@@ -59,10 +59,8 @@ loop2:
         addi        s1, s1, 1         #s++
         lb          t0, 0(s1)         #t0=s[i]
         addi        s3, s3, 1         #length++
-        beq         t0, s2, zero
-        j           loop2
-zero:                                 #if encounter a space, length = 0
-        addi        s3, x0, 0
+        bne         t0, s2, loop2           
+        addi        s3, x0, 0         #if encounter a space, length = 0
         j           loop2
 return:    
         ret
