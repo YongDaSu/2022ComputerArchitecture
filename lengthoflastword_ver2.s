@@ -1,3 +1,8 @@
+#
+# If the last position has space, I recognized the last position which is not space.
+# Then I start to count the length, if I encounter a space, I zero the length.
+# When I reach the last position which is not space, I return the length.
+#
 .data
 str1:    .string "Hello World"
 str2:    .string "i am a student  "
