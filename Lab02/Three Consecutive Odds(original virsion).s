@@ -1,4 +1,9 @@
 <contributed by WangHanChi>
+/***
+In this virsion of the program, I found some memory segmentation fault.
+So I fix the program, where is in https://github.com/YongDaSu/2022ComputerArchitecture/blob/main/Lab02/Three%20Consecutive%20Odds.s
+***/
+
 
 .data
 test0: .word 2, 6, 4, 1
