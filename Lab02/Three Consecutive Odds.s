@@ -44,7 +44,8 @@ initialize:
         la    a1,    arr3          #recover the addr of array1
         lw    a2,    arr3_size     #recover the array size of array1
         jal   ra, main             #strat main program
-        j     Exit
+        li   a7, 10
+        ecall
 print_array:                       #print all array element
         lw    s0, 0(a1)            #load element
         addi  a0, s0, 0            #a0 = s0        
@@ -83,7 +84,14 @@ False:
         li    a7, 4
         ecall    
         ret
-Exit:
-        li   a7, 10
-        ecall
-                
+#Terminal output
+/***
+2 6 
+The answer is false
+1 2 34 3 4 5 7 23 25 
+The answer is true
+1 3 4 7 9 12 
+The answer is false
+
+Program exited with code: 0
+***/
