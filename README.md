@@ -1,7 +1,7 @@
 ### 2022ComputerArchitecture
 
-#### Lab01
+#### Lab01:
 RISC-V Assembly and Instruction Pipeline
 
-#### Lab02
+#### Lab02:
 RISC-V Toolchain
