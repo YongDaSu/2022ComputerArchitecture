@@ -1,0 +1,2 @@
+   text	   data	    bss	    dec	    hex	filename
+  75096	   2816	    812	  78724	  13384	TCO
