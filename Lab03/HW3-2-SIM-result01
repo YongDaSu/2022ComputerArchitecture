@@ -1,0 +1,50 @@
+reyjeff95036@22:~/srv32$ make HW3-2
+make[1]: Entering directory '/home/reyjeff95036/srv32/sw'
+make -C common
+make[2]: Entering directory '/home/reyjeff95036/srv32/sw/common'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/reyjeff95036/srv32/sw/common'
+make[2]: Entering directory '/home/reyjeff95036/srv32/sw/HW3-2'
+riscv-none-elf-gcc -O3 -Wall -march=rv32im_zicsr -mabi=ilp32  -misa-spec=2.2 -march=rv32im -nostartfiles -nostdlib -L../common -o HW3-2.elf HW3-2.c -lc -lm -lgcc -lsys -T ../common/default.ld
+riscv-none-elf-objcopy -j .text -O binary HW3-2.elf imem.bin
+riscv-none-elf-objcopy -j .data -O binary HW3-2.elf dmem.bin
+riscv-none-elf-objcopy -O binary HW3-2.elf memory.bin
+riscv-none-elf-objdump -d HW3-2.elf > HW3-2.dis
+riscv-none-elf-readelf -a HW3-2.elf > HW3-2.symbol
+make[2]: Leaving directory '/home/reyjeff95036/srv32/sw/HW3-2'
+make[1]: Leaving directory '/home/reyjeff95036/srv32/sw'
+make[1]: Entering directory '/home/reyjeff95036/srv32/sim'
+The answer1 is 0
+The answer2 is 1
+The answer3 is 0
+
+Excuting 5683 instructions, 7807 cycles, 1.373 CPI
+Program terminate
+- ../rtl/../testbench/testbench.v:434: Verilog $finish
+
+Simulation statistics
+=====================
+Simulation time  : 0.095 s
+Simulation cycles: 7818
+Simulation speed : 0.0822947 MHz
+
+make[1]: Leaving directory '/home/reyjeff95036/srv32/sim'
+make[1]: Entering directory '/home/reyjeff95036/srv32/tools'
+./rvsim --memsize 128 -l trace.log ../sw/HW3-2/HW3-2.elf
+The answer1 is 0
+The answer2 is 1
+The answer3 is 0
+
+Excuting 5683 instructions, 7807 cycles, 1.374 CPI
+Program terminate
+
+Simulation statistics
+=====================
+Simulation time  : 0.005 s
+Simulation cycles: 7807
+Simulation speed : 1.580 MHz
+
+make[1]: Leaving directory '/home/reyjeff95036/srv32/tools'
+Compare the trace between RTL and ISS simulator
+=== Simulation passed ===
+
